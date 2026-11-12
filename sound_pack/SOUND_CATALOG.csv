@@ -1,0 +1,31 @@
+category,filename,description_ko,relative_path,seconds
+shoot,shoot_laser_01.wav,기본 직선 레이저 — 가볍고 짧은 발사음,assets/audio/sfx/shoot/shoot_laser_01.wav,0.19
+shoot,shoot_laser_02.wav,밝은 2중 레이저 — 높은 음의 발사음,assets/audio/sfx/shoot/shoot_laser_02.wav,0.22
+shoot,shoot_plasma_01.wav,플라즈마 발사 — 부드러운 전자음,assets/audio/sfx/shoot/shoot_plasma_01.wav,0.3
+shoot,shoot_plasma_02.wav,플라즈마 펄스 — 짧은 상승·하강음,assets/audio/sfx/shoot/shoot_plasma_02.wav,0.25
+shoot,shoot_cannon_01.wav,강한 캐논 — 낮은 타격감,assets/audio/sfx/shoot/shoot_cannon_01.wav,0.37
+enemy,enemy_shot_01.wav,적 일반탄 — 짧고 낮은 전자음,assets/audio/sfx/enemy/enemy_shot_01.wav,0.24
+enemy,enemy_shot_02.wav,적 추적탄 — 흔들리는 전자음,assets/audio/sfx/enemy/enemy_shot_02.wav,0.31
+enemy,enemy_shot_03.wav,적 연속탄 — 3연타,assets/audio/sfx/enemy/enemy_shot_03.wav,0.37
+hit,hit_light_01.wav,가벼운 명중 — 짧은 팅 소리,assets/audio/sfx/hit/hit_light_01.wav,0.14
+hit,hit_metal_01.wav,금속 명중 — 날카로운 충돌음,assets/audio/sfx/hit/hit_metal_01.wav,0.25
+hit,hit_shield_01.wav,보호막 피격 — 울림 있는 소리,assets/audio/sfx/hit/hit_shield_01.wav,0.44
+explosion,explosion_small_01.wav,작은 폭발 — 일반 적 격추,assets/audio/sfx/explosion/explosion_small_01.wav,0.38
+explosion,explosion_medium_01.wav,중간 폭발 — 강한 적 격추,assets/audio/sfx/explosion/explosion_medium_01.wav,0.68
+explosion,explosion_large_01.wav,큰 폭발 — 다중 충격과 잔향,assets/audio/sfx/explosion/explosion_large_01.wav,1.05
+explosion,explosion_boss_01.wav,보스 폭발 — 긴 연속 폭발,assets/audio/sfx/explosion/explosion_boss_01.wav,1.62
+damage,damage_alert_01.wav,플레이어 피격 — 경고음,assets/audio/sfx/damage/damage_alert_01.wav,0.37
+damage,damage_alert_02.wav,플레이어 피격 — 두 번 울리는 경고,assets/audio/sfx/damage/damage_alert_02.wav,0.55
+item,item_powerup_01.wav,무기 강화 — 4음 상승,assets/audio/sfx/item/item_powerup_01.wav,0.6
+item,item_powerup_02.wav,무기 강화 — 반짝이는 높은 멜로디,assets/audio/sfx/item/item_powerup_02.wav,0.67
+item,item_health_01.wav,체력 회복 — 부드러운 3음,assets/audio/sfx/item/item_health_01.wav,0.74
+item,item_coin_01.wav,아이템 획득 — 짧은 2음,assets/audio/sfx/item/item_coin_01.wav,0.35
+ui,ui_select_01.wav,메뉴 선택 — 짧은 클릭음,assets/audio/sfx/ui/ui_select_01.wav,0.1
+ui,ui_select_02.wav,메뉴 선택 — 낮은 클릭음,assets/audio/sfx/ui/ui_select_02.wav,0.1
+ui,ui_start_01.wav,게임 시작 — 상승 멜로디,assets/audio/sfx/ui/ui_start_01.wav,0.84
+ui,ui_pause_01.wav,일시정지 — 짧은 하강음,assets/audio/sfx/ui/ui_pause_01.wav,0.22
+ui,ui_gameover_01.wav,게임 오버 — 하강 멜로디,assets/audio/sfx/ui/ui_gameover_01.wav,1.18
+ui,ui_clear_01.wav,게임 클리어 — 승리 멜로디,assets/audio/sfx/ui/ui_clear_01.wav,1.37
+stage,stage_transition_01.wav,스테이지 전환 — 상승 효과,assets/audio/sfx/stage/stage_transition_01.wav,0.75
+stage,stage_warning_01.wav,보스 경고 — 반복 경보,assets/audio/sfx/stage/stage_warning_01.wav,1.1
+stage,stage_boss_intro_01.wav,보스 등장 — 긴 긴장감 효과,assets/audio/sfx/stage/stage_boss_intro_01.wav,1.48
