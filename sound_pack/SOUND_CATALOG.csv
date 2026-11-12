@@ -1,4 +1,4 @@
-category,filename,description_ko,relative_path,seconds
+﻿category,filename,description_ko,relative_path,seconds
 shoot,shoot_laser_01.wav,기본 직선 레이저 — 가볍고 짧은 발사음,assets/audio/sfx/shoot/shoot_laser_01.wav,0.19
 shoot,shoot_laser_02.wav,밝은 2중 레이저 — 높은 음의 발사음,assets/audio/sfx/shoot/shoot_laser_02.wav,0.22
 shoot,shoot_plasma_01.wav,플라즈마 발사 — 부드러운 전자음,assets/audio/sfx/shoot/shoot_plasma_01.wav,0.3
