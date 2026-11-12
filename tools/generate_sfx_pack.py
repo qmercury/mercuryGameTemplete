@@ -6,8 +6,8 @@ import csv, html, zipfile, shutil
 
 SR=44100
 rng=np.random.default_rng(20261112)
-root=Path(__file__).resolve().parents[1] / 'sound_pack'
-if root.exists(): shutil.rmtree(root)
+root=Path(__file__).resolve().parents[1] / 'shooting_game'
+# Do not delete students' game project; regenerate sound assets only.
 (root/'assets'/'audio'/'sfx').mkdir(parents=True)
 (root/'assets'/'audio'/'bgm').mkdir(parents=True)
 (root/'assets'/'audio'/'bgm'/'.gitkeep').write_text('',encoding='utf-8')
@@ -146,7 +146,7 @@ with (root/'SOUND_CATALOG.csv').open('w',encoding='utf-8-sig',newline='') as fp:
     w.writerows(records)
 
 intro='''# Pygame 종스크롤 슈팅게임 — 선택형 효과음 라이브러리\n\n2인 1조 학생팀이 취향에 맞게 효과음을 골라 쓰도록 만든 교육용 샘플입니다.\n모두 외부 음원 샘플 없이 파형 합성 방식으로 새로 제작한 44.1kHz / 16-bit / 모노 WAV 파일입니다.\n\n## 시작하기\n\n1. 압축을 풀고 `preview.html`을 브라우저로 열어 효과음을 듣습니다.\n2. 원하는 효과음을 선택해 게임의 `assets/audio/sfx/` 폴더에서 사용합니다.\n3. 팀 기록지에 선택한 파일명을 기록합니다.\n4. `assets/audio/bgm/` 폴더는 추후 배경음악을 추가할 공간입니다. 배경음악은 포함되어 있지 않습니다.\n\n## 폴더와 효과음 용도\n\n- `shoot/`: 플레이어 총알 발사\n- `enemy/`: 적 총알 발사\n- `hit/`: 총알이 목표물에 맞음\n- `explosion/`: 적 또는 보스의 폭발\n- `damage/`: 플레이어 피격\n- `item/`: 무기 강화·체력 회복·아이템 획득\n- `ui/`: 메뉴 선택·게임 시작·일시정지·게임 오버·클리어\n- `stage/`: 스테이지 전환·보스 경고·보스 등장\n\n## 수업 운영 권장 사항\n\n- 2인 1조가 공통 효과음 파일 중 서로 다른 것을 골라도 됩니다.\n- 먼저 `shoot`, `hit`, `explosion`의 소리를 선택해 기본 게임에 적용합니다.\n- 학생들이 효과음이 재생되어야 하는 상황(이벤트)을 직접 설계하도록 합니다.\n- 연속 발사 소리는 지나치게 길거나 큰 소리를 선택하지 않도록 합니다.\n- BGM과 효과음은 각각 볼륨을 조절할 수 있도록 게임에서 분리하는 것을 권장합니다.\n- 학습용 기본 합성음이라 전문 스튜디오 제작 음원과 질감이 다를 수 있습니다.\n\n## 저작권 및 이용\n\n이 팩의 WAV 파일은 이번 프로젝트를 위해 새로 합성한 음원입니다.\n학생 수업·학습용 게임에 자유롭게 사용하거나 수정·공유할 수 있습니다.\n제3자 음원은 포함되어 있지 않습니다.\n\n파일 목록과 길이는 `SOUND_CATALOG.csv`를 참고하세요.\n'''
-(root/'README.md').write_text(intro,encoding='utf-8')
+(root/'SOUND_README.md').write_text(intro,encoding='utf-8')
 
 styles='''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pygame 슈팅게임 효과음 미리듣기</title><style>body{font-family:system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;max-width:920px;margin:24px auto;padding:0 18px;color:#1c2d43;background:#fafcfe}h1{font-size:24px}p{color:#536174}h2{margin-top:30px;color:#34516f}table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}td,th{text-align:left;padding:11px;border-bottom:1px solid #e8edf5;font-size:13px}th{background:#edf5fc}audio{width:200px;height:35px}code{font-size:12px;color:#31526e}@media(max-width:600px){td,th{padding:6px;font-size:12px}audio{width:126px}code{word-break:break-word}}</style></head><body><h1>🎮 슈팅게임 효과음 라이브러리</h1><p>각 효과음을 들어보고 팀 게임에 어울리는 소리를 골라보세요. 파일은 모두 WAV이며, 목록에서 파일명을 확인할 수 있습니다.</p>'''
 labels={'shoot':'플레이어 발사','enemy':'적 발사','hit':'명중','explosion':'폭발','damage':'플레이어 피격','item':'아이템','ui':'게임 메뉴·결과','stage':'스테이지·보스'}

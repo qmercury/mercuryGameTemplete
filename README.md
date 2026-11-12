@@ -1,40 +1,50 @@
-# Pygame 2D Shooter — 2인 1조 프로젝트 템플릿
+# Mercury Game Template — 2인 1조 Pygame 슈팅게임 프로젝트
 
-학생들이 Thonny와 Pygame으로 직접 개발하는 종스크롤 슈팅게임 수업의 공통 에셋 저장소입니다.
+Thonny와 Pygame으로 학생 2명이 한 팀이 되어 게임을 **직접 개발**하기 위한 공통 프로젝트 구조입니다. 완성된 게임 코드는 제공하지 않습니다.
 
-- 기준 해상도: 1280×720 (16:9)
-- 테스트 창: 960×540
-- 목표 FPS: 60
-- 조작: 키보드 → 추후 SPIKE Prime 컨트롤러 연동
-- 개발 방식: 2인 1조, 총 14단계 미션
-- 완성된 게임 코드는 포함하지 않습니다. 학생들이 직접 구현합니다.
+- 게임 기준 해상도: 1280 × 720 (16:9), 테스트 창 권장: 960 × 540
+- 목표: 60 FPS, 종스크롤, 상하좌우 자유 이동
+- 입력: 키보드, 이후 SPIKE Prime 연동
+- 개발 미션: 게임 창 → 플레이어 → 이동 → 발사 → 적 → 충돌 → 체력 → 적 이동 → 적 공격 → 스테이지 → 아이템 → 보스 → UI → 최종 완성
 
-## 효과음 라이브러리
-
-`sound_pack/`에 8개 분류, 30개 WAV 효과음, 미리듣기 페이지와 목록이 있습니다.
-`sound_pack/preview.html`을 다운로드한 폴더에서 열면 소리를 들어볼 수 있습니다.
-
-재생성 방법:
+## 첫 다운로드
 
 ```bash
-python -m pip install numpy scipy soundfile
-python tools/generate_sfx_pack.py
+git clone https://github.com/qmercury/mercuryGameTemplete.git
+cd mercuryGameTemplete/shooting_game
 ```
 
-Pygame 프로젝트에 사용할 때는 `sound_pack/assets/audio/sfx/`를 게임의 `assets/audio/sfx/`에 복사하세요.
+Thonny에서 `main.py`를 열고 학생들이 1단계부터 구현합니다. Python용 Pygame은 Thonny 패키지 관리에서 `pygame-ce`를 설치해 사용할 수 있습니다.
 
-## 구성
+이미 복제한 프로젝트의 변경 사항은 저장소 폴더에서 `git pull`로 가져옵니다. 학생들의 미커밋 작업이 있으면 먼저 저장·커밋하고 충돌을 확인하세요.
+
+## 디렉터리
 
 ```text
-README.md
-tools/generate_sfx_pack.py
-sound_pack/
-  README.md
-  SOUND_CATALOG.csv
-  preview.html
-  assets/audio/sfx/
-    shoot/ enemy/ hit/ explosion/ damage/ item/ ui/ stage/
-  assets/audio/bgm/
+shooting_game/
+├── main.py
+├── assets/
+│   ├── images/
+│   │   ├── player/
+│   │   ├── enemies/
+│   │   ├── bullets/
+│   │   └── backgrounds/
+│   └── audio/
+│       ├── sfx/
+│       │   ├── shoot/
+│       │   ├── enemy/
+│       │   ├── hit/
+│       │   ├── explosion/
+│       │   ├── damage/
+│       │   ├── item/
+│       │   ├── ui/
+│       │   └── stage/
+│       └── bgm/
+├── preview.html
+├── SOUND_CATALOG.csv
+└── SOUND_README.md
 ```
 
-> 기본 효과음은 직접 파형 합성으로 제작한 교육용 소리입니다. 자유롭게 사용·수정·공유할 수 있습니다.
+이미지 폴더는 현재 비어 있고 `.gitkeep`으로 관리합니다. 효과음은 8개 종류의 WAV 30개가 포함되어 있으며, `shooting_game/preview.html`을 브라우저에서 열어 들어볼 수 있습니다. BGM은 아직 없습니다.
+
+효과음 합성 원본(관리자용): `tools/generate_sfx_pack.py`. 실행하려면 `numpy scipy soundfile`을 설치하세요. 일반 학생은 실행하지 않아도 됩니다.
